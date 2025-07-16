@@ -15,12 +15,25 @@ function switchTheme(){
     const currentTheme = document.documentElement.getAttribute('data-theme');
     if(!currentTheme || currentTheme === 'light'){
         document.documentElement.setAttribute('data-theme', 'dark');
+        localStorage.setItem('theme', 'dark')
         toggleDarkMode();
     } else {
         document.documentElement.setAttribute('data-theme', 'light');
+        localStorage.setItem('theme', 'light');
         toggleLightMode();
     }
 }
 
 //Event listener
 themeSwitcher.addEventListener('click', switchTheme);
+
+// Check Local Storage for Theme
+const currentThemeFromLocalStorage = localStorage.getItem('theme');
+if (currentThemeFromLocalStorage) {
+    document.documentElement.setAttribute('data-theme', currentThemeFromLocalStorage);
+    if(currentThemeFromLocalStorage === 'dark') {
+        toggleDarkMode();
+    } else {
+        toggleLightMode();
+    }
+}
