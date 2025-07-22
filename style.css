@@ -281,17 +281,16 @@ h2 {
 
     nav {
         width: 100%;
-        background: var(--background)
+        background: var(--background);
     }
 
     .wave > svg:last-child {
         border-bottom: 20px solid #1b4965;
     }
-
 }
 
-/*  Tablet horizontql */
-@media screen and (min-width: 900px) and (max-width: 1180px) {
+/* Tablet Horizontal */
+@media screen and (min-width: 800px) and (max-width: 1180px) {
     .main-image {
         height: auto;
         width: 75%;
@@ -305,13 +304,17 @@ h2 {
     }
 }
 
-/* Tablet vertical */
-@media screen and (min-width: 700px) and (max-width: 900px) {
-    /*  section 2 */
+/* Tablet Vertical */
+@media screen and (min-width: 700px) and (max-width: 821px) {
+	nav ul {
+		font-size: 2rem !important;
+	}
+
+    /* Section 2 */
     .main-image {
         height: auto;
         width: 85%;
-        height: -35px;
+        top: -35%;
         border-width: 5px;
         padding: 10px;
     }
@@ -327,16 +330,85 @@ h2 {
         left: 5.5%;
     }
 
-    /* section 4 */
+    /* Section 4 */
     #section-4 {
         margin-top: 50vh;
     }
 
     .blog-container {
         position: relative;
-        margin-top: -20%;
+        top: -20%;
     }
-
-    
 }
 
+/* Smartphone Horizontal */
+@media screen and (min-width: 600px) and (max-width: 950px) {
+    nav ul {
+        font-size: 1.25rem;
+    }
+
+    .small-image {
+        height: 70%;
+    }
+
+    #section-4 h2 {
+        margin-top: 15vh;
+    }
+}
+
+/* Smartphone Vertical */
+@media screen and (max-width: 600px) {
+    nav ul {
+        position: relative;
+        left: -20px;
+    }
+
+    h2 {
+        font-size: 2.2rem;
+        text-align: center;
+    }
+
+    /* Section 1 */
+    .social-media-icons {
+        font-size: 45px;
+        top: -50px;
+    }
+
+    /* Section 2 */
+    .main-image {
+        height: auto;
+        max-width: 85%;
+        top: -45%;
+        border-width: 5px;
+        padding: 10px;
+    }
+
+    /* Section 3 */
+    .small-image {
+        height: auto;
+        width: 75%;
+        border-width: 5px;
+        padding: 10px;
+        margin: auto 5% !important;
+        position: relative;
+        left: 3.5%;
+    }
+
+    /* Section 4 */
+    #section-4 h2 {
+        margin-top: 10vh;
+    }
+
+    .blog-container {
+        width: 80%;
+    }
+
+    /* Section 5 */
+    .wave > svg {
+        border-bottom: 20px solid transparent;
+    }
+
+    .footer {
+        bottom: 10px;
+    }
+}
